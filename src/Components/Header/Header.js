@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Navbar, Nav, FormControl, Container, Button, Form } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from "react-router-dom";
 
 import logo from './logo.svg';
 import Home from '../../Pages/Home';
@@ -35,9 +35,9 @@ class Header extends Component {
 
                 <Router>
                     <Switch>
-                        <Route exact path='/' component={Home} />
-                        <Route exact path='/charts' component={Charts} />
-                        <Route exact path='/categories' component={Categories} />
+                        <HashRouter exact path='/' component={Home} />
+                        <HashRouter exact path='/charts' component={Charts} />
+                        <HashRouter exact path='/categories' component={Categories} />
                     </Switch>
                 </Router>
 
